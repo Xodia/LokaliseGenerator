@@ -1,0 +1,12 @@
+{
+{% for single in copy %}    "{{ single.key|camelcase }}": "{{ single.value.value }}",
+{% endfor %}
+{% for plural in formats %}    "{{ plural.key|camelcase }}": {
+        "format": "{{ plural.value.value }}",
+        {% for parameter in plural.value.parameters %}{% for variant in parameter.variants %}{{ variant.name }}{% if variant.qualifier == "one" %}"{{ parameter.name }}": "{{ variant.variant}}"{% if not forloop.last %},
+        {% endif %}{% elif variant.qualifier == "zero" %}"{{ parameter.name }}Zero": "{{ variant.variant}}"{% if not forloop.last %},
+        {% endif %}{% elif variant.qualifier == "other" %}"{{ parameter.name }}_plural": "{{ variant.variant}}"{% if not forloop.last %},
+        {% endif %}{% endif %}{% endfor %}{% endfor %}
+    }{% if not forloop.last %},
+{% endif %}{% endfor %}
+}

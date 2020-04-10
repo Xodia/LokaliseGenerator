@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+Generated using Cerberus — https://github.com/StashInvest/Cerberus
+-->
+<plist version="1.0">
+<dict>{% for format in formats %}
+    <key>{{ module_name|lowercase }}.{{ submodule_name|lowercase }}.{{ format.parent|lowercase }}.{{ format.key|lowercase }}</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@{{ format.key }}@</string>
+        <key>{{ format.key|lowercase }}</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>{{ format.type }}</string>{% for variant in format.variants %}
+            <key>{{ variant.qualifier }}</key>
+            <string>{{ variant.variant }}</string>{% endfor %}
+        </dict>
+    </dict>{% endfor %}
+</dict>
+</plist>

@@ -13,6 +13,16 @@
 		4C58F61D244112A6001A20EC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F619244112A6001A20EC /* Parser.swift */; };
 		4C58F61E244112A6001A20EC /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F61A244112A6001A20EC /* ArgumentParser.swift */; };
 		4C58F61F244112A6001A20EC /* LokaliseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F61B244112A6001A20EC /* LokaliseModels.swift */; };
+		4CED78302441270700993149 /* StencilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED782F2441270700993149 /* StencilExtension.swift */; };
+		4CED7835244127C000993149 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED7834244127C000993149 /* Template.swift */; };
+		4CED7837244128DC00993149 /* Contexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED7836244128DC00993149 /* Contexts.swift */; };
+		4CED783B24412D2900993149 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED783A24412D2900993149 /* String+Ext.swift */; };
+		4CED783D24412DA300993149 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED783C24412DA300993149 /* Encodable+Ext.swift */; };
+		4CED784A24412E4500993149 /* Strings.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784924412E3E00993149 /* Strings.stencil */; };
+		4CED784B24412E4500993149 /* StringsDict.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784724412E3E00993149 /* StringsDict.stencil */; };
+		4CED784C24412E4500993149 /* SwiftCodeGeneration.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784624412E3E00993149 /* SwiftCodeGeneration.stencil */; };
+		4CED784D24412E4500993149 /* Web.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784524412E3E00993149 /* Web.stencil */; };
+		4CED784E24412E4500993149 /* XML.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784824412E3E00993149 /* XML.stencil */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +35,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		4CED783E24412E0000993149 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				4CED784A24412E4500993149 /* Strings.stencil in CopyFiles */,
+				4CED784B24412E4500993149 /* StringsDict.stencil in CopyFiles */,
+				4CED784C24412E4500993149 /* SwiftCodeGeneration.stencil in CopyFiles */,
+				4CED784D24412E4500993149 /* Web.stencil in CopyFiles */,
+				4CED784E24412E4500993149 /* XML.stencil in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +58,16 @@
 		4C58F619244112A6001A20EC /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		4C58F61A244112A6001A20EC /* ArgumentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentParser.swift; sourceTree = "<group>"; };
 		4C58F61B244112A6001A20EC /* LokaliseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LokaliseModels.swift; sourceTree = "<group>"; };
+		4CED782F2441270700993149 /* StencilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StencilExtension.swift; sourceTree = "<group>"; };
+		4CED7834244127C000993149 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		4CED7836244128DC00993149 /* Contexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contexts.swift; sourceTree = "<group>"; };
+		4CED783A24412D2900993149 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		4CED783C24412DA300993149 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
+		4CED784524412E3E00993149 /* Web.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Web.stencil; sourceTree = "<group>"; };
+		4CED784624412E3E00993149 /* SwiftCodeGeneration.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftCodeGeneration.stencil; sourceTree = "<group>"; };
+		4CED784724412E3E00993149 /* StringsDict.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StringsDict.stencil; sourceTree = "<group>"; };
+		4CED784824412E3E00993149 /* XML.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = XML.stencil; sourceTree = "<group>"; };
+		4CED784924412E3E00993149 /* Strings.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Strings.stencil; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +101,47 @@
 		4C58F60A244110CA001A20EC /* LokaliseGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				4CED783924412D2000993149 /* Extension */,
 				4C58F61A244112A6001A20EC /* ArgumentParser.swift */,
 				4C58F618244112A6001A20EC /* LokaliseGenerator.swift */,
 				4C58F61B244112A6001A20EC /* LokaliseModels.swift */,
 				4C58F619244112A6001A20EC /* Parser.swift */,
 				4C58F60B244110CA001A20EC /* main.swift */,
+				4CED78312441271600993149 /* Stencil */,
 			);
 			path = LokaliseGenerator;
+			sourceTree = "<group>";
+		};
+		4CED78312441271600993149 /* Stencil */ = {
+			isa = PBXGroup;
+			children = (
+				4CED783824412A1C00993149 /* templates */,
+				4CED782F2441270700993149 /* StencilExtension.swift */,
+				4CED7834244127C000993149 /* Template.swift */,
+				4CED7836244128DC00993149 /* Contexts.swift */,
+			);
+			path = Stencil;
+			sourceTree = "<group>";
+		};
+		4CED783824412A1C00993149 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				4CED784924412E3E00993149 /* Strings.stencil */,
+				4CED784724412E3E00993149 /* StringsDict.stencil */,
+				4CED784624412E3E00993149 /* SwiftCodeGeneration.stencil */,
+				4CED784524412E3E00993149 /* Web.stencil */,
+				4CED784824412E3E00993149 /* XML.stencil */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
+		4CED783924412D2000993149 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4CED783A24412D2900993149 /* String+Ext.swift */,
+				4CED783C24412DA300993149 /* Encodable+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +154,7 @@
 				4C58F604244110CA001A20EC /* Sources */,
 				4C58F605244110CA001A20EC /* Frameworks */,
 				4C58F606244110CA001A20EC /* CopyFiles */,
+				4CED783E24412E0000993149 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -140,9 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CED783B24412D2900993149 /* String+Ext.swift in Sources */,
+				4CED78302441270700993149 /* StencilExtension.swift in Sources */,
 				4C58F60C244110CA001A20EC /* main.swift in Sources */,
 				4C58F61C244112A6001A20EC /* LokaliseGenerator.swift in Sources */,
+				4CED7837244128DC00993149 /* Contexts.swift in Sources */,
 				4C58F61D244112A6001A20EC /* Parser.swift in Sources */,
+				4CED7835244127C000993149 /* Template.swift in Sources */,
+				4CED783D24412DA300993149 /* Encodable+Ext.swift in Sources */,
 				4C58F61F244112A6001A20EC /* LokaliseModels.swift in Sources */,
 				4C58F61E244112A6001A20EC /* ArgumentParser.swift in Sources */,
 			);

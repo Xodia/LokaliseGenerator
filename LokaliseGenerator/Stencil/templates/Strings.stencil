@@ -1,0 +1,7 @@
+// {{ file_name }}.strings
+// Generated using Cerberus — https://github.com/StashInvest/Cerberus
+
+// Singles{% for single in singles %}
+"{{ module_name|lowercase }}.{{ submodule_name|lowercase }}.{{ single.key|lowercase }}" = "{{ single.value.value }}";{% endfor %}
+// Formats{% for format in formats %}
+"{{ module_name|lowercase }}.{{ submodule_name|lowercase }}.{{ format.key|lowercase }}" = "{{ format.value.value }}";{% endfor %}

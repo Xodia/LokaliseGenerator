@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Generated using Cerberus — https://github.com/StashInvest/Cerberus
+-->
+<resources>{% for single in copy %}
+    <string name="{{ module_name|lowercase }}_{{ submodule_name|lowercase }}_{{ single.key }}">{{ single.value.value|escape }}</string>{% endfor %}{% for format in formats %}{% if format.type != 'string' %}
+    <plurals name="{{ module_name|lowercase}}_{{ submodule_name|lowercase }}_{{ format.parent }}_{{ format.key }}">{% for variant in format.variants %}
+        <item quantity="{{ variant.qualifier }}">{{ variant.variant|escape }}</item>{% endfor %}
+    </plurals>{% elif format.type == 'string' %}
+    <string name="{{ module_name|lowercase }}_{{ submodule_name|lowercase }}_{{ format.parent }}">{{ format.parentFormat|escape }}</string>{% endif %}{%endfor%}
+</resources>

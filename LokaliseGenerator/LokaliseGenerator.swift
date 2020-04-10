@@ -10,6 +10,8 @@ import Foundation
 import Cerberus
 import CerberusCore
 import Files
+import Stencil
+import PathKit
 
 struct LokaliseGenerator {
 
@@ -41,10 +43,22 @@ struct LokaliseGenerator {
             return Submodule(name: key, language: value)
         }
         let module = Module(name: name, submodules: submodules)
-        Cerberus().export(type: .iOS, outputDirectory: directory, module: module)
+        let environment = stencilEnvironment()
+        let context = Context()
+
+        Cerberus(environment: environment, templates: [
+            (Templates.strings.rawValue, context.context(for: Templates.strings))
+        ]).export(outputDirectory: directory, module: module)
+    }
+
+    func stencilEnvironment() -> Environment {
+        let extensions = StencilExtension.ext
+        let loader = FileSystemLoader(paths: [Path(Bundle.main.bundlePath)])
+        return Environment(loader: loader, extensions: [extensions])
     }
 }
 
 private extension LokaliseGenerator {
 
+    
 }
