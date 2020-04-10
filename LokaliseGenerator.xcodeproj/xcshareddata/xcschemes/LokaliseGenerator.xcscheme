@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C59CD4E243698FE00E50207"
+               BlueprintIdentifier = "4C58F607244110CA001A20EC"
                BuildableName = "LokaliseGenerator"
                BlueprintName = "LokaliseGenerator"
                ReferencedContainer = "container:LokaliseGenerator.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C59CD4E243698FE00E50207"
+            BlueprintIdentifier = "4C58F607244110CA001A20EC"
             BuildableName = "LokaliseGenerator"
             BlueprintName = "LokaliseGenerator"
             ReferencedContainer = "container:LokaliseGenerator.xcodeproj">
@@ -67,7 +67,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C59CD4E243698FE00E50207"
+            BlueprintIdentifier = "4C58F607244110CA001A20EC"
             BuildableName = "LokaliseGenerator"
             BlueprintName = "LokaliseGenerator"
             ReferencedContainer = "container:LokaliseGenerator.xcodeproj">

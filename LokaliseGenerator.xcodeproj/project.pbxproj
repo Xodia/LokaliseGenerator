@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C58F5F32440FDE3001A20EC /* CerberusCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4C58F5F22440FDE3001A20EC /* CerberusCore */; };
-		4C58F5F52440FF2E001A20EC /* LokaliseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F5F42440FF2E001A20EC /* LokaliseModels.swift */; };
-		4C59CD53243698FE00E50207 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59CD52243698FE00E50207 /* main.swift */; };
-		4C89C8552440E08900036989 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89C8542440E08900036989 /* Parser.swift */; };
-		4C89C8572440E12E00036989 /* LokaliseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89C8562440E12E00036989 /* LokaliseGenerator.swift */; };
-		4C89C85A2440E53600036989 /* Files in Frameworks */ = {isa = PBXBuildFile; productRef = 4C89C8592440E53600036989 /* Files */; };
-		4C89C85E2440E61C00036989 /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89C85D2440E61C00036989 /* ArgumentParser.swift */; };
+		4C58F60C244110CA001A20EC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F60B244110CA001A20EC /* main.swift */; };
+		4C58F614244110F7001A20EC /* Cerberus in Frameworks */ = {isa = PBXBuildFile; productRef = 4C58F613244110F7001A20EC /* Cerberus */; };
+		4C58F61C244112A6001A20EC /* LokaliseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F618244112A6001A20EC /* LokaliseGenerator.swift */; };
+		4C58F61D244112A6001A20EC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F619244112A6001A20EC /* Parser.swift */; };
+		4C58F61E244112A6001A20EC /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F61A244112A6001A20EC /* ArgumentParser.swift */; };
+		4C58F61F244112A6001A20EC /* LokaliseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F61B244112A6001A20EC /* LokaliseModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4C59CD4D243698FE00E50207 /* CopyFiles */ = {
+		4C58F606244110CA001A20EC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -29,51 +28,50 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4C58F5F42440FF2E001A20EC /* LokaliseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokaliseModels.swift; sourceTree = "<group>"; };
-		4C59CD4F243698FE00E50207 /* LokaliseGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LokaliseGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C59CD52243698FE00E50207 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		4C89C8542440E08900036989 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		4C89C8562440E12E00036989 /* LokaliseGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokaliseGenerator.swift; sourceTree = "<group>"; };
-		4C89C85D2440E61C00036989 /* ArgumentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentParser.swift; sourceTree = "<group>"; };
+		4C58F608244110CA001A20EC /* LokaliseGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LokaliseGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C58F60B244110CA001A20EC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4C58F618244112A6001A20EC /* LokaliseGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LokaliseGenerator.swift; sourceTree = "<group>"; };
+		4C58F619244112A6001A20EC /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		4C58F61A244112A6001A20EC /* ArgumentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentParser.swift; sourceTree = "<group>"; };
+		4C58F61B244112A6001A20EC /* LokaliseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LokaliseModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C59CD4C243698FE00E50207 /* Frameworks */ = {
+		4C58F605244110CA001A20EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C58F5F32440FDE3001A20EC /* CerberusCore in Frameworks */,
-				4C89C85A2440E53600036989 /* Files in Frameworks */,
+				4C58F614244110F7001A20EC /* Cerberus in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C59CD46243698FE00E50207 = {
+		4C58F5FF244110CA001A20EC = {
 			isa = PBXGroup;
 			children = (
-				4C59CD51243698FE00E50207 /* LokaliseGenerator */,
-				4C59CD50243698FE00E50207 /* Products */,
+				4C58F60A244110CA001A20EC /* LokaliseGenerator */,
+				4C58F609244110CA001A20EC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4C59CD50243698FE00E50207 /* Products */ = {
+		4C58F609244110CA001A20EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C59CD4F243698FE00E50207 /* LokaliseGenerator */,
+				4C58F608244110CA001A20EC /* LokaliseGenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C59CD51243698FE00E50207 /* LokaliseGenerator */ = {
+		4C58F60A244110CA001A20EC /* LokaliseGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				4C59CD52243698FE00E50207 /* main.swift */,
-				4C89C8542440E08900036989 /* Parser.swift */,
-				4C89C8562440E12E00036989 /* LokaliseGenerator.swift */,
-				4C89C85D2440E61C00036989 /* ArgumentParser.swift */,
-				4C58F5F42440FF2E001A20EC /* LokaliseModels.swift */,
+				4C58F61A244112A6001A20EC /* ArgumentParser.swift */,
+				4C58F618244112A6001A20EC /* LokaliseGenerator.swift */,
+				4C58F61B244112A6001A20EC /* LokaliseModels.swift */,
+				4C58F619244112A6001A20EC /* Parser.swift */,
+				4C58F60B244110CA001A20EC /* main.swift */,
 			);
 			path = LokaliseGenerator;
 			sourceTree = "<group>";
@@ -81,13 +79,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C59CD4E243698FE00E50207 /* LokaliseGenerator */ = {
+		4C58F607244110CA001A20EC /* LokaliseGenerator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C59CD56243698FE00E50207 /* Build configuration list for PBXNativeTarget "LokaliseGenerator" */;
+			buildConfigurationList = 4C58F60F244110CA001A20EC /* Build configuration list for PBXNativeTarget "LokaliseGenerator" */;
 			buildPhases = (
-				4C59CD4B243698FE00E50207 /* Sources */,
-				4C59CD4C243698FE00E50207 /* Frameworks */,
-				4C59CD4D243698FE00E50207 /* CopyFiles */,
+				4C58F604244110CA001A20EC /* Sources */,
+				4C58F605244110CA001A20EC /* Frameworks */,
+				4C58F606244110CA001A20EC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -95,29 +93,28 @@
 			);
 			name = LokaliseGenerator;
 			packageProductDependencies = (
-				4C89C8592440E53600036989 /* Files */,
-				4C58F5F22440FDE3001A20EC /* CerberusCore */,
+				4C58F613244110F7001A20EC /* Cerberus */,
 			);
-			productName = LokaliseGenerator;
-			productReference = 4C59CD4F243698FE00E50207 /* LokaliseGenerator */;
+			productName = Ooo;
+			productReference = 4C58F608244110CA001A20EC /* LokaliseGenerator */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4C59CD47243698FE00E50207 /* Project object */ = {
+		4C58F600244110CA001A20EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Morgan Collino";
 				TargetAttributes = {
-					4C59CD4E243698FE00E50207 = {
+					4C58F607244110CA001A20EC = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 4C59CD4A243698FE00E50207 /* Build configuration list for PBXProject "LokaliseGenerator" */;
+			buildConfigurationList = 4C58F603244110CA001A20EC /* Build configuration list for PBXProject "LokaliseGenerator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -125,37 +122,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 4C59CD46243698FE00E50207;
+			mainGroup = 4C58F5FF244110CA001A20EC;
 			packageReferences = (
-				4C89C8582440E53600036989 /* XCRemoteSwiftPackageReference "Files" */,
-				4C58F5F12440FDE3001A20EC /* XCRemoteSwiftPackageReference "CerberusCore" */,
+				4C58F612244110F7001A20EC /* XCRemoteSwiftPackageReference "Cerberus" */,
 			);
-			productRefGroup = 4C59CD50243698FE00E50207 /* Products */;
+			productRefGroup = 4C58F609244110CA001A20EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C59CD4E243698FE00E50207 /* LokaliseGenerator */,
+				4C58F607244110CA001A20EC /* LokaliseGenerator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C59CD4B243698FE00E50207 /* Sources */ = {
+		4C58F604244110CA001A20EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C89C8552440E08900036989 /* Parser.swift in Sources */,
-				4C89C8572440E12E00036989 /* LokaliseGenerator.swift in Sources */,
-				4C59CD53243698FE00E50207 /* main.swift in Sources */,
-				4C58F5F52440FF2E001A20EC /* LokaliseModels.swift in Sources */,
-				4C89C85E2440E61C00036989 /* ArgumentParser.swift in Sources */,
+				4C58F60C244110CA001A20EC /* main.swift in Sources */,
+				4C58F61C244112A6001A20EC /* LokaliseGenerator.swift in Sources */,
+				4C58F61D244112A6001A20EC /* Parser.swift in Sources */,
+				4C58F61F244112A6001A20EC /* LokaliseModels.swift in Sources */,
+				4C58F61E244112A6001A20EC /* ArgumentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4C59CD54243698FE00E50207 /* Debug */ = {
+		4C58F60D244110CA001A20EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +211,7 @@
 			};
 			name = Debug;
 		};
-		4C59CD55243698FE00E50207 /* Release */ = {
+		4C58F60E244110CA001A20EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,7 +264,7 @@
 			};
 			name = Release;
 		};
-		4C59CD57243698FE00E50207 /* Debug */ = {
+		4C58F610244110CA001A20EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -279,7 +275,7 @@
 			};
 			name = Debug;
 		};
-		4C59CD58243698FE00E50207 /* Release */ = {
+		4C58F611244110CA001A20EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -293,20 +289,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C59CD4A243698FE00E50207 /* Build configuration list for PBXProject "LokaliseGenerator" */ = {
+		4C58F603244110CA001A20EC /* Build configuration list for PBXProject "LokaliseGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C59CD54243698FE00E50207 /* Debug */,
-				4C59CD55243698FE00E50207 /* Release */,
+				4C58F60D244110CA001A20EC /* Debug */,
+				4C58F60E244110CA001A20EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C59CD56243698FE00E50207 /* Build configuration list for PBXNativeTarget "LokaliseGenerator" */ = {
+		4C58F60F244110CA001A20EC /* Build configuration list for PBXNativeTarget "LokaliseGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C59CD57243698FE00E50207 /* Debug */,
-				4C59CD58243698FE00E50207 /* Release */,
+				4C58F610244110CA001A20EC /* Debug */,
+				4C58F611244110CA001A20EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -314,36 +310,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4C58F5F12440FDE3001A20EC /* XCRemoteSwiftPackageReference "CerberusCore" */ = {
+		4C58F612244110F7001A20EC /* XCRemoteSwiftPackageReference "Cerberus" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Xodia/CerberusCore";
+			repositoryURL = "https://github.com/Xodia/Cerberus";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		4C89C8582440E53600036989 /* XCRemoteSwiftPackageReference "Files" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JohnSundell/Files";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.1.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4C58F5F22440FDE3001A20EC /* CerberusCore */ = {
+		4C58F613244110F7001A20EC /* Cerberus */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4C58F5F12440FDE3001A20EC /* XCRemoteSwiftPackageReference "CerberusCore" */;
-			productName = CerberusCore;
-		};
-		4C89C8592440E53600036989 /* Files */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4C89C8582440E53600036989 /* XCRemoteSwiftPackageReference "Files" */;
-			productName = Files;
+			package = 4C58F612244110F7001A20EC /* XCRemoteSwiftPackageReference "Cerberus" */;
+			productName = Cerberus;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 4C59CD47243698FE00E50207 /* Project object */;
+	rootObject = 4C58F600244110CA001A20EC /* Project object */;
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cerberus
 import CerberusCore
 import Files
 
@@ -40,7 +41,7 @@ struct LokaliseGenerator {
             return Submodule(name: key, language: value)
         }
         let module = Module(name: name, submodules: submodules)
-        print(module)
+        Cerberus().export(type: .iOS, outputDirectory: directory, module: module)
     }
 }
 
