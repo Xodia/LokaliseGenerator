@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "CerberusCore",
-        "repositoryURL": "git@github.com:StashInvest/cerberus.git",
+        "repositoryURL": "https://github.com/Xodia/CerberusCore",
         "state": {
           "branch": "master",
-          "revision": "8f94b8be14d7efec5a7de4983842a9c19b283c79",
+          "revision": "9c258cac2179967bcfd92bcb69239872cc91a62a",
           "version": null
         }
       },

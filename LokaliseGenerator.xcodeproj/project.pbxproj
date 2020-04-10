@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C58F5F32440FDE3001A20EC /* CerberusCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4C58F5F22440FDE3001A20EC /* CerberusCore */; };
+		4C58F5F52440FF2E001A20EC /* LokaliseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F5F42440FF2E001A20EC /* LokaliseModels.swift */; };
 		4C59CD53243698FE00E50207 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59CD52243698FE00E50207 /* main.swift */; };
-		4C59CD5B24369A0A00E50207 /* CerberusCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4C59CD5A24369A0A00E50207 /* CerberusCore */; };
 		4C89C8552440E08900036989 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89C8542440E08900036989 /* Parser.swift */; };
 		4C89C8572440E12E00036989 /* LokaliseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C89C8562440E12E00036989 /* LokaliseGenerator.swift */; };
 		4C89C85A2440E53600036989 /* Files in Frameworks */ = {isa = PBXBuildFile; productRef = 4C89C8592440E53600036989 /* Files */; };
@@ -28,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C58F5F42440FF2E001A20EC /* LokaliseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokaliseModels.swift; sourceTree = "<group>"; };
 		4C59CD4F243698FE00E50207 /* LokaliseGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LokaliseGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C59CD52243698FE00E50207 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4C89C8542440E08900036989 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -40,8 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C58F5F32440FDE3001A20EC /* CerberusCore in Frameworks */,
 				4C89C85A2440E53600036989 /* Files in Frameworks */,
-				4C59CD5B24369A0A00E50207 /* CerberusCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,7 @@
 				4C89C8542440E08900036989 /* Parser.swift */,
 				4C89C8562440E12E00036989 /* LokaliseGenerator.swift */,
 				4C89C85D2440E61C00036989 /* ArgumentParser.swift */,
+				4C58F5F42440FF2E001A20EC /* LokaliseModels.swift */,
 			);
 			path = LokaliseGenerator;
 			sourceTree = "<group>";
@@ -92,8 +95,8 @@
 			);
 			name = LokaliseGenerator;
 			packageProductDependencies = (
-				4C59CD5A24369A0A00E50207 /* CerberusCore */,
 				4C89C8592440E53600036989 /* Files */,
+				4C58F5F22440FDE3001A20EC /* CerberusCore */,
 			);
 			productName = LokaliseGenerator;
 			productReference = 4C59CD4F243698FE00E50207 /* LokaliseGenerator */;
@@ -124,8 +127,8 @@
 			);
 			mainGroup = 4C59CD46243698FE00E50207;
 			packageReferences = (
-				4C59CD5924369A0A00E50207 /* XCRemoteSwiftPackageReference "cerberus" */,
 				4C89C8582440E53600036989 /* XCRemoteSwiftPackageReference "Files" */,
+				4C58F5F12440FDE3001A20EC /* XCRemoteSwiftPackageReference "CerberusCore" */,
 			);
 			productRefGroup = 4C59CD50243698FE00E50207 /* Products */;
 			projectDirPath = "";
@@ -144,6 +147,7 @@
 				4C89C8552440E08900036989 /* Parser.swift in Sources */,
 				4C89C8572440E12E00036989 /* LokaliseGenerator.swift in Sources */,
 				4C59CD53243698FE00E50207 /* main.swift in Sources */,
+				4C58F5F52440FF2E001A20EC /* LokaliseModels.swift in Sources */,
 				4C89C85E2440E61C00036989 /* ArgumentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,9 +314,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4C59CD5924369A0A00E50207 /* XCRemoteSwiftPackageReference "cerberus" */ = {
+		4C58F5F12440FDE3001A20EC /* XCRemoteSwiftPackageReference "CerberusCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:StashInvest/cerberus.git";
+			repositoryURL = "https://github.com/Xodia/CerberusCore";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -329,9 +333,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4C59CD5A24369A0A00E50207 /* CerberusCore */ = {
+		4C58F5F22440FDE3001A20EC /* CerberusCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4C59CD5924369A0A00E50207 /* XCRemoteSwiftPackageReference "cerberus" */;
+			package = 4C58F5F12440FDE3001A20EC /* XCRemoteSwiftPackageReference "CerberusCore" */;
 			productName = CerberusCore;
 		};
 		4C89C8592440E53600036989 /* Files */ = {
