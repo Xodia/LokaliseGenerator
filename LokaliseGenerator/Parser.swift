@@ -79,7 +79,7 @@ struct Parser {
             let variant = Variant(variant: value, qualifier: QualifierType.init(rawValue: key) ?? .other)
             variants.append(variant)
         }
-        let param = Parameter(name: "value", type: .string, variants: variants)
+        let param = Parameter(name: "value", type: .integer, variants: variants)
         return [param]
     }
 

@@ -47,7 +47,10 @@ struct LokaliseGenerator {
         let context = Context()
 
         Cerberus(environment: environment, templates: [
-            (Templates.strings.rawValue, context.context(for: Templates.strings))
+            ((Templates.strings.rawValue, .eachLanguage), context.context(for: Templates.strings)),
+            ((Templates.stringsDict.rawValue, .eachLanguage), context.context(for: Templates.stringsDict)),
+            ((Templates.swiftCodeGeneration.rawValue, .once), context.context(for: Templates.swiftCodeGeneration)),
+            ((Templates.xml.rawValue, .eachLanguage), context.context(for: Templates.xml))
         ]).export(outputDirectory: directory, module: module)
     }
 

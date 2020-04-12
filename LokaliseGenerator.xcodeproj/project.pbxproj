@@ -23,6 +23,9 @@
 		4CED784C24412E4500993149 /* SwiftCodeGeneration.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784624412E3E00993149 /* SwiftCodeGeneration.stencil */; };
 		4CED784D24412E4500993149 /* Web.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784524412E3E00993149 /* Web.stencil */; };
 		4CED784E24412E4500993149 /* XML.stencil in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CED784824412E3E00993149 /* XML.stencil */; };
+		4CED78512442297900993149 /* Contexts+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED78502442297900993149 /* Contexts+iOS.swift */; };
+		4CED78532442A12900993149 /* Contexts+CodeGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED78522442A12900993149 /* Contexts+CodeGeneration.swift */; };
+		4CED78552442A29300993149 /* Contexts+Android.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED78542442A29300993149 /* Contexts+Android.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +71,9 @@
 		4CED784724412E3E00993149 /* StringsDict.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StringsDict.stencil; sourceTree = "<group>"; };
 		4CED784824412E3E00993149 /* XML.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = XML.stencil; sourceTree = "<group>"; };
 		4CED784924412E3E00993149 /* Strings.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Strings.stencil; sourceTree = "<group>"; };
+		4CED78502442297900993149 /* Contexts+iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contexts+iOS.swift"; sourceTree = "<group>"; };
+		4CED78522442A12900993149 /* Contexts+CodeGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contexts+CodeGeneration.swift"; sourceTree = "<group>"; };
+		4CED78542442A29300993149 /* Contexts+Android.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contexts+Android.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +124,7 @@
 				4CED783824412A1C00993149 /* templates */,
 				4CED782F2441270700993149 /* StencilExtension.swift */,
 				4CED7834244127C000993149 /* Template.swift */,
-				4CED7836244128DC00993149 /* Contexts.swift */,
+				4CED784F2442296500993149 /* Contexts */,
 			);
 			path = Stencil;
 			sourceTree = "<group>";
@@ -142,6 +148,17 @@
 				4CED783C24412DA300993149 /* Encodable+Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		4CED784F2442296500993149 /* Contexts */ = {
+			isa = PBXGroup;
+			children = (
+				4CED7836244128DC00993149 /* Contexts.swift */,
+				4CED78542442A29300993149 /* Contexts+Android.swift */,
+				4CED78502442297900993149 /* Contexts+iOS.swift */,
+				4CED78522442A12900993149 /* Contexts+CodeGeneration.swift */,
+			);
+			path = Contexts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +233,12 @@
 				4CED7837244128DC00993149 /* Contexts.swift in Sources */,
 				4C58F61D244112A6001A20EC /* Parser.swift in Sources */,
 				4CED7835244127C000993149 /* Template.swift in Sources */,
+				4CED78512442297900993149 /* Contexts+iOS.swift in Sources */,
 				4CED783D24412DA300993149 /* Encodable+Ext.swift in Sources */,
 				4C58F61F244112A6001A20EC /* LokaliseModels.swift in Sources */,
+				4CED78532442A12900993149 /* Contexts+CodeGeneration.swift in Sources */,
 				4C58F61E244112A6001A20EC /* ArgumentParser.swift in Sources */,
+				4CED78552442A29300993149 /* Contexts+Android.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
