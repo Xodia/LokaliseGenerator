@@ -10,9 +10,11 @@
 		4C58F60C244110CA001A20EC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F60B244110CA001A20EC /* main.swift */; };
 		4C58F614244110F7001A20EC /* Cerberus in Frameworks */ = {isa = PBXBuildFile; productRef = 4C58F613244110F7001A20EC /* Cerberus */; };
 		4C58F61C244112A6001A20EC /* LokaliseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F618244112A6001A20EC /* LokaliseGenerator.swift */; };
-		4C58F61D244112A6001A20EC /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F619244112A6001A20EC /* Parser.swift */; };
 		4C58F61E244112A6001A20EC /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F61A244112A6001A20EC /* ArgumentParser.swift */; };
 		4C58F61F244112A6001A20EC /* LokaliseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C58F61B244112A6001A20EC /* LokaliseModels.swift */; };
+		4CC500B82468BDEA00FC6EA4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC500B72468BDEA00FC6EA4 /* Parser.swift */; };
+		4CC500BB2468C50800FC6EA4 /* LoggingSyslog in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC500BA2468C50800FC6EA4 /* LoggingSyslog */; };
+		4CC500BD2468C6E400FC6EA4 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC500BC2468C6E400FC6EA4 /* Logger.swift */; };
 		4CED78302441270700993149 /* StencilExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED782F2441270700993149 /* StencilExtension.swift */; };
 		4CED7835244127C000993149 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED7834244127C000993149 /* Template.swift */; };
 		4CED7837244128DC00993149 /* Contexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED7836244128DC00993149 /* Contexts.swift */; };
@@ -58,9 +60,10 @@
 		4C58F608244110CA001A20EC /* LokaliseGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LokaliseGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C58F60B244110CA001A20EC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4C58F618244112A6001A20EC /* LokaliseGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LokaliseGenerator.swift; sourceTree = "<group>"; };
-		4C58F619244112A6001A20EC /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		4C58F61A244112A6001A20EC /* ArgumentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgumentParser.swift; sourceTree = "<group>"; };
 		4C58F61B244112A6001A20EC /* LokaliseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LokaliseModels.swift; sourceTree = "<group>"; };
+		4CC500B72468BDEA00FC6EA4 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		4CC500BC2468C6E400FC6EA4 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		4CED782F2441270700993149 /* StencilExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StencilExtension.swift; sourceTree = "<group>"; };
 		4CED7834244127C000993149 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		4CED7836244128DC00993149 /* Contexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contexts.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C58F614244110F7001A20EC /* Cerberus in Frameworks */,
+				4CC500BB2468C50800FC6EA4 /* LoggingSyslog in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +111,13 @@
 		4C58F60A244110CA001A20EC /* LokaliseGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				4CED783924412D2000993149 /* Extension */,
 				4C58F61A244112A6001A20EC /* ArgumentParser.swift */,
+				4CED783924412D2000993149 /* Extension */,
+				4CC500BC2468C6E400FC6EA4 /* Logger.swift */,
 				4C58F618244112A6001A20EC /* LokaliseGenerator.swift */,
 				4C58F61B244112A6001A20EC /* LokaliseModels.swift */,
-				4C58F619244112A6001A20EC /* Parser.swift */,
 				4C58F60B244110CA001A20EC /* main.swift */,
+				4CC500B72468BDEA00FC6EA4 /* Parser.swift */,
 				4CED78312441271600993149 /* Stencil */,
 			);
 			path = LokaliseGenerator;
@@ -180,6 +185,7 @@
 			name = LokaliseGenerator;
 			packageProductDependencies = (
 				4C58F613244110F7001A20EC /* Cerberus */,
+				4CC500BA2468C50800FC6EA4 /* LoggingSyslog */,
 			);
 			productName = Ooo;
 			productReference = 4C58F608244110CA001A20EC /* LokaliseGenerator */;
@@ -211,6 +217,7 @@
 			mainGroup = 4C58F5FF244110CA001A20EC;
 			packageReferences = (
 				4C58F612244110F7001A20EC /* XCRemoteSwiftPackageReference "Cerberus" */,
+				4CC500B92468C50800FC6EA4 /* XCRemoteSwiftPackageReference "swift-log-syslog" */,
 			);
 			productRefGroup = 4C58F609244110CA001A20EC /* Products */;
 			projectDirPath = "";
@@ -230,13 +237,14 @@
 				4CED78302441270700993149 /* StencilExtension.swift in Sources */,
 				4C58F60C244110CA001A20EC /* main.swift in Sources */,
 				4C58F61C244112A6001A20EC /* LokaliseGenerator.swift in Sources */,
+				4CC500B82468BDEA00FC6EA4 /* Parser.swift in Sources */,
 				4CED7837244128DC00993149 /* Contexts.swift in Sources */,
-				4C58F61D244112A6001A20EC /* Parser.swift in Sources */,
 				4CED7835244127C000993149 /* Template.swift in Sources */,
 				4CED78512442297900993149 /* Contexts+iOS.swift in Sources */,
 				4CED783D24412DA300993149 /* Encodable+Ext.swift in Sources */,
 				4C58F61F244112A6001A20EC /* LokaliseModels.swift in Sources */,
 				4CED78532442A12900993149 /* Contexts+CodeGeneration.swift in Sources */,
+				4CC500BD2468C6E400FC6EA4 /* Logger.swift in Sources */,
 				4C58F61E244112A6001A20EC /* ArgumentParser.swift in Sources */,
 				4CED78552442A29300993149 /* Contexts+Android.swift in Sources */,
 			);
@@ -412,6 +420,14 @@
 				kind = branch;
 			};
 		};
+		4CC500B92468C50800FC6EA4 /* XCRemoteSwiftPackageReference "swift-log-syslog" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ianpartridge/swift-log-syslog.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -419,6 +435,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4C58F612244110F7001A20EC /* XCRemoteSwiftPackageReference "Cerberus" */;
 			productName = Cerberus;
+		};
+		4CC500BA2468C50800FC6EA4 /* LoggingSyslog */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CC500B92468C50800FC6EA4 /* XCRemoteSwiftPackageReference "swift-log-syslog" */;
+			productName = LoggingSyslog;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

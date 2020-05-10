@@ -1,0 +1,6 @@
+// SharkDetail.strings.strings
+// Generated using Cerberus — https://github.com/StashInvest/Cerberus
+
+// Singles
+"shark.detail.view_title" = "Détail du produit  %s %s %s";
+// Formats

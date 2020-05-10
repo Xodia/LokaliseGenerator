@@ -14,7 +14,7 @@ extension Encodable {
         do {
             guard let data = try? JSONEncoder().encode(self),
                 let dictionary = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed) as? [String: Any] else {
-                    print("error(message: Couldn't encode \(self) to JSON dictionary.")
+                    LokaliseLogger.log("Couldn't encode \(self) to JSON dictionary.")
                     return [:]
             }
             return dictionary

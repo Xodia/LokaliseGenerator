@@ -57,7 +57,7 @@ extension Context {
 
     func stringsDictContext(module: Module, submodule: Submodule, language: Language) -> (String, [String: Any]) {
         let filename = [module.name, submodule.name].compactMap({ $0.capitalizingFirstLetter() }).joined()
-        let fileName = "\(filename).stringsDict"
+        let fileName = "\(filename).stringsdict"
         let formats = language.copy.filter({ $0.isPlural || $0.isInterpolatedPlural }).compactMap({ pluralFormat(copy: $0) }).flatMap({ $0 })
         let context = _stringsDictContext(formats: formats, moduleName: module.name, submoduleName: submodule.name, fileName: fileName)
         return (fileName, context)

@@ -32,7 +32,7 @@ extension Context {
         let keys = Array(Set(copies.compactMap { $0.key }))
         let subkeys = Array(Set(copies.compactMap { $0.value.parameters?.compactMap({ $0.name }) }.flatMap({ $0 }))).compactMap({
             Subkey(name: $0, isPascal:  $0.contains("_")) })
-        let singles = copies.filter({ $0.isSingle }).compactMap { $0.asDictionary() }
+        let singles = copies.compactMap { $0.asDictionary() }
         let formats = copies.filter({ $0.isPlural }).compactMap { $0.asDictionary() }
 
         return [

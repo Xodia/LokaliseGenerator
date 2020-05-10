@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Lokalise JSON models
+// Lokalise JSON models (Structured JSON)
 
 struct Singular: Decodable {
     let notes: String

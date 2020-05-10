@@ -1,0 +1,8 @@
+{
+    "view_title": {
+        "translation": "Product %s  %s  %s Detail",
+        "notes": "Welcoming title",
+        "limit": "420",
+        "context": "context"
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Generated using Cerberus — https://github.com/StashInvest/Cerberus
+-->
+<resources>
+    <string name="shark_detail_view_title">Détail du produit  %s %s %s</string>
+</resources>

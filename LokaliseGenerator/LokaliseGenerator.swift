@@ -15,13 +15,43 @@ import PathKit
 
 struct LokaliseGenerator {
 
-    let parser = Parser()
+    let parser = LokaliseParser()
 
     func run(directory: Folder) {
-        let name = directory.name.replacingOccurrences(of: "-locale", with: "")
-        print("Parent directory name: \(name)")
+        let module = readDirectory(directory)
+        let environment = stencilEnvironment()
+        let context = Context()
+
+        Cerberus(environment: environment, templates: [
+            ((Templates.strings.rawValue, .eachLanguage), context.context(for: Templates.strings)),
+            ((Templates.stringsDict.rawValue, .eachLanguage), context.context(for: Templates.stringsDict)),
+            ((Templates.swiftCodeGeneration.rawValue, .once), context.context(for: Templates.swiftCodeGeneration)),
+            ((Templates.xml.rawValue, .eachLanguage), context.context(for: Templates.xml))
+        ]).export(outputDirectory: directory, module: module)
+    }
+}
+
+// Environment Set up
+private extension LokaliseGenerator {
+
+    func stencilEnvironment() -> Environment {
+        let extensions = StencilExtension.ext
+        let loader = FileSystemLoader(paths: [Path(Bundle.main.bundlePath)])
+        return Environment(loader: loader, extensions: [extensions])
+    }
+}
+
+// Parsing
+private extension LokaliseGenerator {
+
+    func readDirectory(_ directory: Folder) -> Module {
         var cache: [String: [Language]] = [:]
 
+        parseFiles(directory, cache: &cache)
+        return generateModule(directory, cache: cache)
+    }
+
+    func parseFiles(_ directory: Folder, cache: inout [String: [Language]]) {
         directory.subfolders.forEach { (languageFolder) in
             let languageFiles = languageFolder.files.filter { $0.extension == "json" }
             languageFiles.forEach { (file) in
@@ -38,30 +68,15 @@ struct LokaliseGenerator {
                 }
             }
         }
+    }
 
+    func generateModule(_ directory: Folder, cache: [String: [Language]]) -> Module {
+        let name = directory.name.replacingOccurrences(of: "-locale", with: "")
         let submodules = cache.compactMap { (key: String, value: [Language]) -> Submodule in
             return Submodule(name: key, language: value)
         }
+
         let module = Module(name: name, submodules: submodules)
-        let environment = stencilEnvironment()
-        let context = Context()
-
-        Cerberus(environment: environment, templates: [
-            ((Templates.strings.rawValue, .eachLanguage), context.context(for: Templates.strings)),
-            ((Templates.stringsDict.rawValue, .eachLanguage), context.context(for: Templates.stringsDict)),
-            ((Templates.swiftCodeGeneration.rawValue, .once), context.context(for: Templates.swiftCodeGeneration)),
-            ((Templates.xml.rawValue, .eachLanguage), context.context(for: Templates.xml))
-        ]).export(outputDirectory: directory, module: module)
+        return module
     }
-
-    func stencilEnvironment() -> Environment {
-        let extensions = StencilExtension.ext
-        let loader = FileSystemLoader(paths: [Path(Bundle.main.bundlePath)])
-        return Environment(loader: loader, extensions: [extensions])
-    }
-}
-
-private extension LokaliseGenerator {
-
-    
 }

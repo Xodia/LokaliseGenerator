@@ -35,7 +35,15 @@ struct ArgumentParser {
     }
 
     func man() {
-        print("man really")
+        LokaliseLogger.log("""
+
+        How to use:
+        -----------
+
+        ./LokaliseGenerator directory=<path to lokalise inputs directory>
+
+        This script take as input a Structured JSON output from Lokalise. To see an example of it, check the Example directory.
+        """)
     }
 
     func folder(for path: String) -> Folder? {
@@ -43,10 +51,8 @@ struct ArgumentParser {
             if path.starts(with: "/") {
                 return try Folder(path: path)
             }
-
             return try Folder.current.subfolder(at: path)
         } catch {
-            print(error)
             return nil
         }
     }

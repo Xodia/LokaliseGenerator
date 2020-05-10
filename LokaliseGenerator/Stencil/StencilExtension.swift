@@ -86,7 +86,7 @@ struct StencilExtension {
     }
 
     static func replace(string: String, pattern: String, template: String) -> String {
-        var value: NSMutableString = NSMutableString(string: string);
+        let value: NSMutableString = NSMutableString(string: string)
         let regex = try? NSRegularExpression(pattern: pattern)
         regex?.replaceMatches(in: value, options: .reportProgress, range: NSRange(location: 0,length: value.length), withTemplate: template)
 

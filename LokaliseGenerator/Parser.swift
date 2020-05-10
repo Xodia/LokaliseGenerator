@@ -9,7 +9,7 @@
 import Foundation
 import CerberusCore
 
-struct Parser {
+struct LokaliseParser {
 
     let jsonDecoder = JSONDecoder()
 
@@ -33,11 +33,13 @@ struct Parser {
             if let singular = try? jsonDecoder.decode(Singular.self, from: jsonData) {
                 let output = parseParameters(from: singular.translation)
                 let value = Value(value: output.0, parameters: output.1)
-                copies.append(Copy(key: key, value: value))
+                let copy = Copy(key: key, value: value)
+                copies.append(copy)
             } else if let plural = try? jsonDecoder.decode(Plural.self, from: jsonData) {
                 let parameters = parsePlural(dictionary: plural.translation)
                 let value = Value(value: "__value__", parameters: parameters)
-                copies.append(Copy(key: key, value: value))
+                let copy = Copy(key: key, value: value)
+                copies.append(copy)
             }
         })
         return copies
@@ -59,7 +61,6 @@ struct Parser {
         var parsedString = string
         let regex = try! NSRegularExpression(pattern: "%[0-9]\\$[a-z]")
         var buffer: [Parameter] = []
-
 
         let matches = regex.matches(in: string, options: [], range: NSRange(location: 0, length: string.count) )
         matches.forEach { (result) in

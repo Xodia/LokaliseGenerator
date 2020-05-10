@@ -54,6 +54,24 @@
           "revision": "9c3468e300ba75ede0d7eb4c495897e0ac3591c3",
           "version": null
         }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "74d7b91ceebc85daf387ebb206003f78813f71aa",
+          "version": "1.2.0"
+        }
+      },
+      {
+        "package": "swift-log-syslog",
+        "repositoryURL": "https://github.com/ianpartridge/swift-log-syslog.git",
+        "state": {
+          "branch": null,
+          "revision": "654ea6e32b9802c45468c4c743ed507c36a775c2",
+          "version": "1.0.2"
+        }
       }
     ]
   },
