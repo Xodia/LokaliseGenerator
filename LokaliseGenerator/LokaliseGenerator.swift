@@ -15,6 +15,10 @@ import PathKit
 
 struct LokaliseGenerator {
 
+    enum LanguageExtension: String {
+        case lproj = ".lproj"
+    }
+
     let parser = LokaliseParser()
 
     func run(directory: Folder) {
@@ -23,10 +27,10 @@ struct LokaliseGenerator {
         let context = Context()
 
         Cerberus(environment: environment, templates: [
-            ((Templates.strings.rawValue, .eachLanguage), context.context(for: Templates.strings)),
-            ((Templates.stringsDict.rawValue, .eachLanguage), context.context(for: Templates.stringsDict)),
+            ((Templates.strings.rawValue, .eachLanguage(extension: LanguageExtension.lproj.rawValue)), context.context(for: Templates.strings)),
+            ((Templates.stringsDict.rawValue, .eachLanguage(extension: LanguageExtension.lproj.rawValue)), context.context(for: Templates.stringsDict)),
             ((Templates.swiftCodeGeneration.rawValue, .once), context.context(for: Templates.swiftCodeGeneration)),
-            ((Templates.xml.rawValue, .eachLanguage), context.context(for: Templates.xml))
+            ((Templates.xml.rawValue, .eachLanguage(extension: nil)), context.context(for: Templates.xml))
         ]).export(outputDirectory: directory, module: module)
     }
 }
