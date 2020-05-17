@@ -52,7 +52,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "directory=/Users/morgancollino/Downloads/Octopus-localee"
+            argument = "directory=/Users/morgancollino/Downloads/Middle-localee"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "outputDirectory=/Users/morgancollino/Downloads/OctopusOutput"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

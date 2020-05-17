@@ -21,7 +21,7 @@ struct LokaliseGenerator {
 
     let parser = LokaliseParser()
 
-    func run(directory: Folder) {
+    func run(directory: Folder, outputDirectory: Folder) {
         let module = readDirectory(directory)
         let environment = stencilEnvironment()
         let context = Context()
@@ -31,7 +31,7 @@ struct LokaliseGenerator {
             ((Templates.stringsDict.rawValue, .eachLanguage(extension: LanguageExtension.lproj.rawValue)), context.context(for: Templates.stringsDict)),
             ((Templates.swiftCodeGeneration.rawValue, .once), context.context(for: Templates.swiftCodeGeneration)),
             ((Templates.xml.rawValue, .eachLanguage(extension: nil)), context.context(for: Templates.xml))
-        ]).export(outputDirectory: directory, module: module)
+        ]).export(outputDirectory: outputDirectory, module: module, subfolderPath: nil)
     }
 }
 

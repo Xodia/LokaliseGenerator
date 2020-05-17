@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/Xodia/Cerberus",
         "state": {
           "branch": "master",
-          "revision": "38bdba62bede9dc791c1565da79b899a2873af77",
+          "revision": "9fb7d72a72960477ef20f85c0f3ea6d59b889684",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/Xodia/CerberusCore",
         "state": {
           "branch": "master",
-          "revision": "2ec9684aba66483d144389ea3b53ca681601c10e",
+          "revision": "4a65c50c8371ea12eaa9340798b5e2dfd6f90a22",
           "version": null
         }
       },

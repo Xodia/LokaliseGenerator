@@ -11,27 +11,36 @@ import Files
 
 private enum ArgumentKeys: String {
     case directory = "directory="
+    case outputDirectory = "outputDirectory="
 }
 
 struct ArgumentParser {
 
-    func parse(args: [String]) -> Folder {
+    func parse(args: [String]) -> (Folder, Folder) {
         var arguments = args
         arguments.remove(at: 0)
 
-        guard arguments.count == 1,
+        guard arguments.count == 2,
             arguments.first?.contains(ArgumentKeys.directory.rawValue) == true else {
             man()
             exit(-1)
         }
 
+        guard arguments.count == 2,
+            arguments[1].contains(ArgumentKeys.outputDirectory.rawValue) == true else {
+                man()
+                exit(-1)
+        }
+
         let directory = arguments[0].replacingOccurrences(of: ArgumentKeys.directory.rawValue, with: "")
-        guard let parentFolder = folder(for: directory) else {
+        let outputDirectory = arguments[1].replacingOccurrences(of: ArgumentKeys.outputDirectory.rawValue, with: "")
+        guard let inputFolder = folder(for: directory),
+            let outputFolder = folder(for: outputDirectory) else {
             man()
             exit(1)
         }
 
-        return parentFolder
+        return (inputFolder, outputFolder)
     }
 
     func man() {
@@ -40,11 +49,14 @@ struct ArgumentParser {
         How to use:
         -----------
 
-        ./LokaliseGenerator directory=<path to lokalise inputs directory>
+        ./LokaliseGenerator directory=<path to input directory> outputDirectory=<path to output directory>
 
         This script take as input a Structured JSON output from Lokalise. To see an example of it, check the Example directory.
         """)
     }
+}
+
+private extension ArgumentParser {
 
     func folder(for path: String) -> Folder? {
         do {
@@ -56,5 +68,4 @@ struct ArgumentParser {
             return nil
         }
     }
-
 }

@@ -10,5 +10,5 @@ import Foundation
 import Files
 
 let argumentParser = ArgumentParser()
-let folder = argumentParser.parse(args: CommandLine.arguments)
-LokaliseGenerator().run(directory: folder)
+let folders = argumentParser.parse(args: CommandLine.arguments)
+LokaliseGenerator().run(directory: folders.0, outputDirectory: folders.1)
